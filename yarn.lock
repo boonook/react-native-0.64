@@ -6037,6 +6037,13 @@ react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.13.1.tgz?cache=0&sync_timestamp=1615566019956&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-is%2Fdownload%2Freact-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
+react-native-auto-height-image@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.npm.taobao.org/react-native-auto-height-image/download/react-native-auto-height-image-3.2.4.tgz#c7a95d4d9701055c680c8dc02076def1107f9522"
+  integrity sha1-x6ldTZcBBVxoDI3AIHbe8RB/lSI=
+  dependencies:
+    prop-types "^15.7.2"
+
 react-native-codegen@^0.0.6:
   version "0.0.6"
   resolved "https://registry.npm.taobao.org/react-native-codegen/download/react-native-codegen-0.0.6.tgz#b3173faa879cf71bfade8d030f9c4698388f6909"
@@ -6151,6 +6158,11 @@ react-native-swipeout@^2.3.6:
     create-react-class "^15.6.0"
     prop-types "^15.5.10"
     react-tween-state "^0.1.5"
+
+react-native-syan-image-picker@^0.4.11:
+  version "0.4.11"
+  resolved "https://registry.npm.taobao.org/react-native-syan-image-picker/download/react-native-syan-image-picker-0.4.11.tgz?cache=0&sync_timestamp=1610960580489&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-native-syan-image-picker%2Fdownload%2Freact-native-syan-image-picker-0.4.11.tgz#1186368fd23a73f38852384943a534d00f41033f"
+  integrity sha1-EYY2j9I6c/OIUjhJQ6U00A9BAz8=
 
 react-native-video@^5.1.1:
   version "5.1.1"

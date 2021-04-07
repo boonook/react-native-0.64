@@ -16,6 +16,7 @@ import ForgetPasswordSccreen from '@/screen/auth/ForgetPasswordSccreen';
 import MerchantScreen from '@/screen/merchant/MerchantScreen';
 import IntegralManageScreen from '@/screen/integralManage/IntegralManageScreen';
 import MySettingScreen from '@/screen/me/common/MySettingScreen';
+import ImageTest from '@/screen/auth/ImageTest';
 ///修改登陆密码
 import EditLoginPwdScreen from '@/screen/me/common/EditLoginPwdScreen';
 ///修改支付密码
@@ -39,6 +40,7 @@ const menu=[
     {name:'editPayPwd',component:EditPayPwdScreen},
     {name:'imageZoomViewer',component:ImageZoomViewerScreen},
     {name:'mySetting',component:MySettingScreen},
+    {name:'imageTest',component:ImageTest},
 ]
 
 function homeTab() {

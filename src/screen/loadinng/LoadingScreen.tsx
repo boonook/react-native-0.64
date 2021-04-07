@@ -1,14 +1,12 @@
-import React, { useState,useEffect } from "react";
-import { View,StyleSheet,TouchableOpacity,Text,Platform} from 'react-native';
-import {JRNStatusBar} from '@/Components/jRNStatusBar/JRNStatusBar';
+import React from "react";
+import { View,StyleSheet,Platform} from 'react-native';
 import {inject, observer} from "mobx-react";
-import Video from 'react-native-video';
 import SplashScreen from 'react-native-splash-screen'
-import {Toast,Portal,Provider} from '@ant-design/react-native'
+import {Provider} from '@ant-design/react-native'
 import NavigationService from "@/utils/NavigationService";
 import constant from '@/utils/constant'
 
-let LoadingScreen = inject("userState")(observer((props=>{
+let LoadingScreen = inject("userState")(observer(((props:any)=>{
     function onLayouts() {
         if(Platform.OS !== 'ios'){
             SplashScreen.hide();

@@ -1,5 +1,4 @@
-//@ts-nocheck
-import { colors, main } from '@/assess/styles';
+import { colors } from '@/assess/styles';
 import { size } from '@/utils';
 import React from 'react';
 import {View,Text,Image,StyleSheet,TextInput,TouchableOpacity} from 'react-native';
@@ -8,10 +7,10 @@ import {Toast} from '@ant-design/react-native'
 import {Login,userInfo} from '@/Api/login';
 import constant from '@/utils/constant';
 
-@inject(["userState"]) // 注入对应的store
+@inject('userState') // 注入对应的store
 @observer // 监听当前组件
 export default class LoginScreen extends React.Component<any,any>{
-    constructor(props) {
+    constructor(props:any) {
         super(props);
         this.state = {
             mnemonic:null,
@@ -44,11 +43,11 @@ export default class LoginScreen extends React.Component<any,any>{
             phone:this.state.phone,
             password:this.state.password,
         }
-        Login(params).then(res=>{
+        Login(params).then((res:any)=>{
             if(res && res.code+''===constant.SUCCESS+''){
                 let data = res.data||{};
                 this.props.userState.login(data);
-                userInfo({}).then(res=>{
+                userInfo({}).then((res:any)=>{
                     this.props.userState.setUserInfo(res.data);
                 })
             }
@@ -56,7 +55,7 @@ export default class LoginScreen extends React.Component<any,any>{
     }
 
     onRegistered=()=>{
-        this.props.navigation.push('registered')
+        this.props.navigation.push('imageTest')
     }
 
     onForgetPwd=()=>{

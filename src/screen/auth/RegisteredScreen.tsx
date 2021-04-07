@@ -209,7 +209,8 @@ const RegisteredScreen = (props) => {
                                     }}
                                    placeholder="请输入手机号"
                                    keyboardType='numeric'
-                                   style={styles.formItemRightText}/>
+                                   style={styles.formItemRightText}
+                                />
                             </View>
                         </View>
                         <View style={[styles.formItem,{marginTop:20}]}>
@@ -220,7 +221,8 @@ const RegisteredScreen = (props) => {
                                 <TextInput value={code} onChange={value =>{
                                     const newText = value.nativeEvent.text.replace(/[^\d]+/, '');
                                     setCode(newText)
-                                }} placeholder="请输入验证码" keyboardType='numeric' style={styles.formItemRightText}/>
+                                    }} placeholder="请输入验证码" keyboardType='numeric' style={styles.formItemRightText}
+                                />
                             </View>
                             <View style={styles.getCodeBtn}>
                                 <Text onPress={_onGetCodeBtn}>{codeTitle}</Text>

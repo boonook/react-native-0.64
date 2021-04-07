@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import { View,Text,StyleSheet,TextInput,StatusBar,Dimensions} from 'react-native';
 import theme from '@/theme/theme.js'
 import Headers from "@/Components/header/Headers";
-import {Toast,Icon,Provider} from '@ant-design/react-native'
+import {Toast,Icon} from '@ant-design/react-native'
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {TouchableOpacity} from "react-native-gesture-handler";
 import {getForgetPwdCode,resetPassword} from "@/Api/login";
@@ -96,7 +96,7 @@ const ForgetPasswordSccreen = (props) => {
             "loginPassword":loginPassword
         }
 
-        resetPassword(params).then(res=>{
+        resetPassword(params).then((res:any)=>{
             if(res && res.code+''===constant.SUCCESS+''){
                 Toast.success('修改成功',0.8);
                 setTimeout(()=>{
@@ -150,78 +150,78 @@ const ForgetPasswordSccreen = (props) => {
 
     return(
         <View>
-                <View style={{ height:height,width:width,flexDirection:'column',backgroundColor:'#fff'}}>
-                    <Headers
-                        leftIcon={'left'}
-                        border={true}
-                        leftColor={'#444'}
-                        backgroundColor={'#fff'}
-                        centerContent={<Text style={[styles.headerBoxCenterText,{color:'#444'}]} numberOfLines={1}>{'忘记密码'}</Text>}
-                        {...props}
-                    />
-                    <View style={styles.formContent}>
-                        <KeyboardAwareScrollView>
-                            <View style={[styles.formItem,{marginTop:20}]}>
-                                <View style={styles.formItemLeft}>
-                                    <Text style={styles.formItemLeftText}>手机号</Text>
-                                </View>
-                                <View style={styles.formItemRight}>
-                                    <TextInput value={phone} onChange={value =>{
-                                        const newText = value.nativeEvent.text.replace(/[^\d]+/, '');
-                                        setPhone(newText);
-                                    }} placeholder="请输入手机号" style={styles.formItemRightText}/>
-                                </View>
+            <View style={{ height:height,width:width,flexDirection:'column',backgroundColor:'#fff'}}>
+                <Headers
+                    leftIcon={'left'}
+                    border={true}
+                    leftColor={'#444'}
+                    backgroundColor={'#fff'}
+                    centerContent={<Text style={[styles.headerBoxCenterText,{color:'#444'}]} numberOfLines={1}>{'忘记密码'}</Text>}
+                    {...props}
+                />
+                <View style={styles.formContent}>
+                    <KeyboardAwareScrollView>
+                        <View style={[styles.formItem,{marginTop:20}]}>
+                            <View style={styles.formItemLeft}>
+                                <Text style={styles.formItemLeftText}>手机号</Text>
                             </View>
-                            <View style={[styles.formItem,{marginTop:20}]}>
-                                <View style={styles.formItemLeft}>
-                                    <Text style={styles.formItemLeftText}>验证码</Text>
-                                </View>
-                                <View style={styles.formItemRight}>
-                                    <TextInput value={code} onChange={value =>{
-                                        const newText = value.nativeEvent.text.replace(/[^\d]+/, '');
-                                        setCode(newText)
-                                    }} placeholder="请输入验证码" keyboardType='numeric' style={styles.formItemRightText}/>
-                                </View>
-                                <View style={styles.getCodeBtn}>
-                                    <Text onPress={_onGetCodeBtn}>{codeTitle}</Text>
-                                </View>
+                            <View style={styles.formItemRight}>
+                                <TextInput value={phone} onChange={value =>{
+                                    const newText = value.nativeEvent.text.replace(/[^\d]+/, '');
+                                    setPhone(newText);
+                                }} placeholder="请输入手机号" style={styles.formItemRightText}/>
                             </View>
-                            <View style={[styles.formItem,{marginTop:20}]}>
-                                <View style={styles.formItemLeft}>
-                                    <Text style={styles.formItemLeftText}>登陆密码</Text>
-                                </View>
-                                <View style={styles.formItemRight}>
-                                    <TextInput value={loginPassword} onChange={value =>{
-                                        setLoginPassword(value.nativeEvent.text)
-                                    }} placeholder="请输入登陆密码" secureTextEntry={settingLoginPwdStatus} style={styles.formItemRightText}/>
-                                </View>
-                                <TouchableOpacity onPress={onSetSettingLoginPwdStatus}>
-                                    {settingLoginPwdStatus?<Icon name="eye" size="md" color="#666" />:<Icon name="eye-invisible" size="md" color="#666" />}
-                                </TouchableOpacity>
+                        </View>
+                        <View style={[styles.formItem,{marginTop:20}]}>
+                            <View style={styles.formItemLeft}>
+                                <Text style={styles.formItemLeftText}>验证码</Text>
                             </View>
-                            <View style={[styles.formItem,{marginTop:20}]}>
-                                <View style={styles.formItemLeft}>
-                                    <Text style={styles.formItemLeftText}>确定登陆密码</Text>
-                                </View>
-                                <View style={styles.formItemRight}>
-                                    <TextInput value={againLoginPassword} onChange={value =>{
-                                        setAgainLoginPassword(value.nativeEvent.text)
-                                    }} placeholder="请输入登陆密码" secureTextEntry={querenLoginPwdStatus} style={styles.formItemRightText}/>
-                                </View>
-                                <TouchableOpacity onPress={onSetQuerenLoginPwdStatus}>
-                                    {querenLoginPwdStatus?<Icon name="eye" size="md" color="#666" />:<Icon name="eye-invisible" size="md" color="#666" />}
-                                </TouchableOpacity>
+                            <View style={styles.formItemRight}>
+                                <TextInput value={code} onChange={value =>{
+                                    const newText = value.nativeEvent.text.replace(/[^\d]+/, '');
+                                    setCode(newText)
+                                }} placeholder="请输入验证码" keyboardType='numeric' style={styles.formItemRightText}/>
                             </View>
-                        </KeyboardAwareScrollView>
-                    </View>
-                    <View style={styles.loginBtn}>
-                        <TouchableOpacity onPress={onSureAndLogin}>
-                            <View style={{backgroundColor:theme.backgroundColor,borderRadius:5}}>
-                                <Text style={styles.loginBtnText}>确认修改登陆</Text>
+                            <View style={styles.getCodeBtn}>
+                                <Text onPress={_onGetCodeBtn}>{codeTitle}</Text>
                             </View>
-                        </TouchableOpacity>
-                    </View>
+                        </View>
+                        <View style={[styles.formItem,{marginTop:20}]}>
+                            <View style={styles.formItemLeft}>
+                                <Text style={styles.formItemLeftText}>登陆密码</Text>
+                            </View>
+                            <View style={styles.formItemRight}>
+                                <TextInput value={loginPassword} onChange={value =>{
+                                    setLoginPassword(value.nativeEvent.text)
+                                }} placeholder="请输入登陆密码" secureTextEntry={settingLoginPwdStatus} style={styles.formItemRightText}/>
+                            </View>
+                            <TouchableOpacity onPress={onSetSettingLoginPwdStatus}>
+                                {settingLoginPwdStatus?<Icon name="eye" size="md" color="#666" />:<Icon name="eye-invisible" size="md" color="#666" />}
+                            </TouchableOpacity>
+                        </View>
+                        <View style={[styles.formItem,{marginTop:20}]}>
+                            <View style={styles.formItemLeft}>
+                                <Text style={styles.formItemLeftText}>确定登陆密码</Text>
+                            </View>
+                            <View style={styles.formItemRight}>
+                                <TextInput value={againLoginPassword} onChange={value =>{
+                                    setAgainLoginPassword(value.nativeEvent.text)
+                                }} placeholder="请输入登陆密码" secureTextEntry={querenLoginPwdStatus} style={styles.formItemRightText}/>
+                            </View>
+                            <TouchableOpacity onPress={onSetQuerenLoginPwdStatus}>
+                                {querenLoginPwdStatus?<Icon name="eye" size="md" color="#666" />:<Icon name="eye-invisible" size="md" color="#666" />}
+                            </TouchableOpacity>
+                        </View>
+                    </KeyboardAwareScrollView>
                 </View>
+                <View style={styles.loginBtn}>
+                    <TouchableOpacity onPress={onSureAndLogin}>
+                        <View style={{backgroundColor:theme.backgroundColor,borderRadius:5}}>
+                            <Text style={styles.loginBtnText}>确认修改登陆</Text>
+                        </View>
+                    </TouchableOpacity>
+                </View>
+            </View>
         </View>
     )
 }
