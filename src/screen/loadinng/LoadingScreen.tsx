@@ -1,5 +1,5 @@
 import React from "react";
-import { View,StyleSheet,Platform} from 'react-native';
+import { View,StyleSheet,Platform,StatusBar} from 'react-native';
 import {inject, observer} from "mobx-react";
 import SplashScreen from 'react-native-splash-screen'
 import {Provider} from '@ant-design/react-native'
@@ -26,6 +26,11 @@ let LoadingScreen = inject("userState")(observer(((props:any)=>{
 
     return(
         <Provider>
+            <StatusBar
+                backgroundColor={'transparent'}
+                barStyle={'dark-content'}
+                translucent={true}
+            />
             <View style={{ flex: 1}} onLayout={onLayouts}/>
         </Provider>
     )

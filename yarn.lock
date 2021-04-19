@@ -6117,6 +6117,11 @@ react-native-modal-popover@^0.0.12:
     lodash.debounce "^4.0.8"
     prop-types "^15.6.2"
 
+react-native-parabolic@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.npm.taobao.org/react-native-parabolic/download/react-native-parabolic-1.1.2.tgz#9df04425b162d72f3822cb9670130037a5f8625d"
+  integrity sha1-nfBEJbFi1y84IsuWcBMAN6X4Yl0=
+
 react-native-reanimated@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/react-native-reanimated/download/react-native-reanimated-2.0.1.tgz?cache=0&sync_timestamp=1616591422018&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Freact-native-reanimated%2Fdownload%2Freact-native-reanimated-2.0.1.tgz#440bbba813df283e9f410ed763e4791d859c67e9"

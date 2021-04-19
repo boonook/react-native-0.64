@@ -1,7 +1,7 @@
 import { colors } from '@/assess/styles';
 import { size } from '@/utils';
 import React from 'react';
-import {View,Text,Image,StyleSheet,TextInput,TouchableOpacity} from 'react-native';
+import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity, StatusBar} from 'react-native';
 import {inject, observer} from 'mobx-react';
 import {Toast} from '@ant-design/react-native'
 import {Login,userInfo} from '@/Api/login';
@@ -55,11 +55,19 @@ export default class LoginScreen extends React.Component<any,any>{
     }
 
     onRegistered=()=>{
-        this.props.navigation.push('imageTest')
+        this.props.navigation.push('registered')
     }
 
     onForgetPwd=()=>{
         this.props.navigation.push('forgetPwd')
+    }
+
+    componentDidMount() {
+        this.props.navigation.addListener('focus', () => {
+            StatusBar.setBackgroundColor("transparent");
+            StatusBar.setTranslucent(true);
+            StatusBar.setBarStyle('dark-content');
+        });
     }
 
     render(){
