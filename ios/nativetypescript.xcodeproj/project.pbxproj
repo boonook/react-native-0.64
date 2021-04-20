@@ -12,8 +12,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3FA3163A39FA443AD39F8492 /* libPods-nativetypescript.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E882D6E5FF208B8DB8564BC9 /* libPods-nativetypescript.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		AF9CDC16262E7D5A009519B3 /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF9CDC14262E7D5A009519B3 /* antfill.ttf */; };
-		AF9CDC17262E7D5A009519B3 /* antoutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF9CDC15262E7D5A009519B3 /* antoutline.ttf */; };
+		AF2E563F262EA6220029B92D /* antfill.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF2E563D262E8A3B0029B92D /* antfill.ttf */; };
+		AF2E5641262EA6280029B92D /* antoutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF2E563E262E8A3B0029B92D /* antoutline.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		57839E188E929C6FB07246DD /* Pods-nativetypescript.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativetypescript.debug.xcconfig"; path = "Target Support Files/Pods-nativetypescript/Pods-nativetypescript.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = nativetypescript/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9800E4C1F9ADFBACCD60E6DB /* Pods-nativetypescript-nativetypescriptTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativetypescript-nativetypescriptTests.release.xcconfig"; path = "Target Support Files/Pods-nativetypescript-nativetypescriptTests/Pods-nativetypescript-nativetypescriptTests.release.xcconfig"; sourceTree = "<group>"; };
-		AF9CDC14262E7D5A009519B3 /* antfill.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = antfill.ttf; sourceTree = "<group>"; };
-		AF9CDC15262E7D5A009519B3 /* antoutline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = antoutline.ttf; sourceTree = "<group>"; };
+		AF2E563D262E8A3B0029B92D /* antfill.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = antfill.ttf; path = ../../android/app/src/main/assets/fonts/antfill.ttf; sourceTree = "<group>"; };
+		AF2E563E262E8A3B0029B92D /* antoutline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = antoutline.ttf; path = ../../android/app/src/main/assets/fonts/antoutline.ttf; sourceTree = "<group>"; };
 		E882D6E5FF208B8DB8564BC9 /* libPods-nativetypescript.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nativetypescript.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F5233111A4A2DA1823396E84 /* Pods-nativetypescript-nativetypescriptTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativetypescript-nativetypescriptTests.debug.xcconfig"; path = "Target Support Files/Pods-nativetypescript-nativetypescriptTests/Pods-nativetypescript-nativetypescriptTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,7 +69,6 @@
 		13B07FAE1A68108700A75B9A /* nativetypescript */ = {
 			isa = PBXGroup;
 			children = (
-				AF9CDC13262E7D5A009519B3 /* fonts */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -100,6 +99,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				AF2E563C262E89F00029B92D /* Resource */,
 				13B07FAE1A68108700A75B9A /* nativetypescript */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* nativetypescriptTests */,
@@ -120,14 +120,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF9CDC13262E7D5A009519B3 /* fonts */ = {
+		AF2E563C262E89F00029B92D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				AF9CDC14262E7D5A009519B3 /* antfill.ttf */,
-				AF9CDC15262E7D5A009519B3 /* antoutline.ttf */,
+				AF2E563D262E8A3B0029B92D /* antfill.ttf */,
+				AF2E563E262E8A3B0029B92D /* antoutline.ttf */,
 			);
-			name = fonts;
-			path = ../fonts;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		B1B7D67A92F7A085DA09F0C6 /* Pods */ = {
@@ -202,8 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9CDC16262E7D5A009519B3 /* antfill.ttf in Resources */,
-				AF9CDC17262E7D5A009519B3 /* antoutline.ttf in Resources */,
+				AF2E5641262EA6280029B92D /* antoutline.ttf in Resources */,
+				AF2E563F262EA6220029B92D /* antfill.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
