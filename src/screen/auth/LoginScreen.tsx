@@ -75,9 +75,9 @@ export default class LoginScreen extends React.Component<any,any>{
             <View style={{flex:1}}>
                 <View style={{flex:1,alignItems:'center',justifyContent:'center',}}>
                     <View style={styles.form}>
-                        {/*<View>*/}
-                        {/*    <Text style={styles.logopage}>登陆界面</Text>*/}
-                        {/*</View>*/}
+                        <View>
+                            <Text style={styles.logopage}>登陆界面</Text>
+                        </View>
                         <View style={styles.formItem}>
                             <Image style={styles.icon} source={require('@/assess/images/auth/icon_phone.png')}/>
                             <TextInput
