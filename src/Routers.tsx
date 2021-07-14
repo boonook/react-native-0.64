@@ -30,17 +30,17 @@ const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 const menu=[
-    {name:'loading',component:LoadingScreen},
-    {name:'login',component:LoginScreen},
+    {name:'loading',component:LoadingScreen,params:{statusbar:'dark-content'}},
+    {name:'login',component:LoginScreen,params:{statusbar:'dark-content'}},
     {name:'home',component:drawer},
-    {name:'integral',component:IntegralManageScreen},
-    {name:'registered',component:RegisteredScreen},
-    {name:'forgetPwd',component:ForgetPasswordSccreen},
-    {name:'editLoginPwd',component:EditLoginPwdScreen},
-    {name:'editPayPwd',component:EditPayPwdScreen},
-    {name:'imageZoomViewer',component:ImageZoomViewerScreen},
-    {name:'mySetting',component:MySettingScreen},
-    {name:'imageTest',component:ImageTest},
+    {name:'integral',component:IntegralManageScreen,params:{statusbar:'dark-content'}},
+    {name:'registered',component:RegisteredScreen,params:{statusbar:'dark-content'}},
+    {name:'forgetPwd',component:ForgetPasswordSccreen,params:{statusbar:'dark-content'}},
+    {name:'editLoginPwd',component:EditLoginPwdScreen,params:{statusbar:'dark-content'}},
+    {name:'editPayPwd',component:EditPayPwdScreen,params:{statusbar:'dark-content'}},
+    {name:'imageZoomViewer',component:ImageZoomViewerScreen,params:{statusbar:'dark-content'}},
+    {name:'mySetting',component:MySettingScreen,params:{statusbar:'dark-content'}},
+    {name:'imageTest',component:ImageTest,params:{statusbar:'dark-content'}},
 ]
 
 function homeTab() {

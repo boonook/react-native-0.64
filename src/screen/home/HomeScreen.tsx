@@ -2,15 +2,12 @@ import React from "react";
 import {View, StyleSheet, Text, ScrollView, StatusBar} from 'react-native';
 import Headers from '@/Components/header/Headers'
 export default class HomeScreen extends React.Component<any,any> {
-
     constructor(props:any) {
         super(props);
         this.state = {
 
         };
     }
-
-
     componentDidMount() {
         this.props.navigation.addListener('focus', () => {
             StatusBar.setBarStyle('dark-content');
