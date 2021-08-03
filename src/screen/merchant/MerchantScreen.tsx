@@ -16,7 +16,7 @@ export default class MerchantScreen extends React.Component<any,any> {
         super(props);
         this.state = {
             data:[
-                {id:'1',name:'是爱情，让父子相认',path:'https://video.yinyuetai.com/6bd60be8b76e4430a2767f89d51dd52c.mp4'},
+                {id:'1',name:'是爱情，让父子相认',path:'https://vd4.bdstatic.com/mda-ki05qgk9e2qzbqcw/hd/mda-ki05qgk9e2qzbqcw.mp4?playlist=%5B%22hd%22%5D&v_from_s=hkapp-haokan-tucheng&auth_key=1627979249-0-0-5dc96bef651b60ebdf16b69bd8bd49d6&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest='},
                 {id:'2',name:'夏天来了，来切一组可爱的蜜桃切片饼干~ ',path:'https://vd4.bdstatic.com/mda-ki05qgk9e2qzbqcw/hd/mda-ki05qgk9e2qzbqcw.mp4?playlist=%5B%22hd%22%5D&v_from_s=hkapp-haokan-tucheng&auth_key=1627979249-0-0-5dc96bef651b60ebdf16b69bd8bd49d6&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest='},
                 {id:'3',name:'看婷婷妹一上场就火力全开#每天看婷婷麻将赢不停',path:'https://vd4.bdstatic.com/mda-meq8v5nkia5v7xke/hd/cae_h264_clips/1621933732541004986/mda-meq8v5nkia5v7xke.mp4?auth_key=1627979277-0-0-1a1dab669d17e7de44c7dd989a1abf2a&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=all'},
                 {id:'4',name:'四个驴蹄穿着厚棉鞋太难受，大块切掉脚底嵌着石子，厚蹄子切掉了',path:'https://vd3.bdstatic.com/mda-kjk7a991ebh1izdf/sc/mda-kjk7a991ebh1izdf.mp4?v_from_s=hkapp-haokan-tucheng&auth_key=1627979376-0-0-daa125fecf1577a09c288f0246343184&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest='},
@@ -47,7 +47,7 @@ export default class MerchantScreen extends React.Component<any,any> {
                     })
                 }}>
                     <Video source={{uri:item.path}}
-                           style={{flex: 1,backgroundColor:'#000'}}
+                           style={{flex: 1,backgroundColor:'#000000',marginTop:-40}}
                            repeat={true}
                            paused={index===this.state.current?this.state.isPause:false}
                            resizeMode='contain'

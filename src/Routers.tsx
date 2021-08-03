@@ -66,7 +66,7 @@ function homeTab() {
                 activeTintColor: '#E73D46',
                 inactiveTintColor: 'gray',
                 tabStyle:{borderColor:'#000000'},
-                style:{backgroundColor:'#000000'},
+                style:{backgroundColor:'#000000',position:'absolute',borderTopColor:'#000000'},
             }}
         >
             <Tab.Screen name="首页" component={HomeScreen}/>
