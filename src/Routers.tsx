@@ -7,14 +7,12 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { View,StyleSheet,Image} from 'react-native';
 import HomeScreen from '@/screen/home/HomeScreen'
 import MeScreen from '@/screen/me/MeScreen'
-import AcceptNewcreen from '@/screen/AcceptNew/AcceptNewcreen'
 import LoginScreen from '@/screen/auth/LoginScreen'
 import DrawerScreen from '@/screen/drawer/DrawerScreen';
 import LoadingScreen from '@/screen/loadinng/LoadingScreen';
 import RegisteredScreen from '@/screen/auth/RegisteredScreen';
 import ForgetPasswordSccreen from '@/screen/auth/ForgetPasswordSccreen';
 import MerchantScreen from '@/screen/merchant/MerchantScreen';
-import IntegralManageScreen from '@/screen/integralManage/IntegralManageScreen';
 import MySettingScreen from '@/screen/me/common/MySettingScreen';
 import ImageTest from '@/screen/auth/ImageTest';
 ///修改登陆密码
@@ -33,7 +31,6 @@ const menu=[
     {name:'loading',component:LoadingScreen,params:{statusbar:'dark-content'}},
     {name:'login',component:LoginScreen,params:{statusbar:'dark-content'}},
     {name:'home',component:drawer},
-    {name:'integral',component:IntegralManageScreen,params:{statusbar:'dark-content'}},
     {name:'registered',component:RegisteredScreen,params:{statusbar:'dark-content'}},
     {name:'forgetPwd',component:ForgetPasswordSccreen,params:{statusbar:'dark-content'}},
     {name:'editLoginPwd',component:EditLoginPwdScreen,params:{statusbar:'dark-content'}},
@@ -52,20 +49,11 @@ function homeTab() {
                         return <View style={styles.tabCenter}>
                                 <Image source={focused?require('@/assess/images/tabs/icon_tab_2.png'):require('@/assess/images/tabs/icon_tab_1.png')} style={[styles.IconImage]}/>
                                </View>;
-                    } else if (route.name === '纳新') {
-                        return <View style={styles.tabCenter}>
-                                 <Image source={focused?require('@/assess/images/tabs/icon_tab_10.png'):require('@/assess/images/tabs/icon_tab_9.png')} style={[styles.IconImage]}/>
-                               </View>;
                     }
-                    else if (route.name === '商城') {
+                    else if (route.name === '短视频') {
                         return <View style={styles.tabCenter}>
                                 <Image source={focused?require('@/assess/images/tabs/icon_tab_4.png'):require('@/assess/images/tabs/icon_tab_3.png')} style={[styles.IconImage]}/>
                                </View>;
-                    }
-                    else if (route.name === '积分') {
-                        return <View style={styles.tabCenter}>
-                            <Image source={focused?require('@/assess/images/tabs/icon_tab_8.png'):require('@/assess/images/tabs/icon_tab_7.png')} style={[styles.IconImage]}/>
-                        </View>;
                     }
                     else if (route.name === '我的') {
                         return <View style={styles.tabCenter}>
@@ -77,12 +65,12 @@ function homeTab() {
             tabBarOptions={{
                 activeTintColor: '#E73D46',
                 inactiveTintColor: 'gray',
+                tabStyle:{borderColor:'#000000'},
+                style:{backgroundColor:'#000000'},
             }}
         >
             <Tab.Screen name="首页" component={HomeScreen}/>
-            <Tab.Screen name="纳新" component={AcceptNewcreen} />
-            <Tab.Screen name="商城" component={MerchantScreen}/>
-            <Tab.Screen name="积分" component={IntegralManageScreen} />
+            <Tab.Screen name="短视频" component={MerchantScreen}/>
             <Tab.Screen name="我的" component={MeScreen} />
         </Tab.Navigator>
     )

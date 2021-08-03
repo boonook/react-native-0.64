@@ -43,15 +43,16 @@ export default class LoginScreen extends React.Component<any,any>{
             phone:this.state.phone,
             password:this.state.password,
         }
-        Login(params).then((res:any)=>{
-            if(res && res.code+''===constant.SUCCESS+''){
-                let data = res.data||{};
-                this.props.userState.login(data);
-                userInfo({}).then((res:any)=>{
-                    this.props.userState.setUserInfo(res.data);
-                })
-            }
-        })
+        this.props.navigation.push('home')
+        // Login(params).then((res:any)=>{
+        //     if(res && res.code+''===constant.SUCCESS+''){
+        //         let data = res.data||{};
+        //         this.props.userState.login(data);
+        //         userInfo({}).then((res:any)=>{
+        //             this.props.userState.setUserInfo(res.data);
+        //         })
+        //     }
+        // })
     }
 
     onRegistered=()=>{
@@ -88,7 +89,7 @@ export default class LoginScreen extends React.Component<any,any>{
                     translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。 
                     barStyle={'dark-content'} // enum('default', 'light-content', 'dark-content') 
                 >
-                </StatusBar> 
+                </StatusBar>
                 <View style={{flex:1,alignItems:'center',justifyContent:'center',}}>
                     <View style={styles.form}>
                         <View>

@@ -32,6 +32,7 @@
 		9800E4C1F9ADFBACCD60E6DB /* Pods-nativetypescript-nativetypescriptTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativetypescript-nativetypescriptTests.release.xcconfig"; path = "Target Support Files/Pods-nativetypescript-nativetypescriptTests/Pods-nativetypescript-nativetypescriptTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF2E563D262E8A3B0029B92D /* antfill.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = antfill.ttf; path = ../../android/app/src/main/assets/fonts/antfill.ttf; sourceTree = "<group>"; };
 		AF2E563E262E8A3B0029B92D /* antoutline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = antoutline.ttf; path = ../../android/app/src/main/assets/fonts/antoutline.ttf; sourceTree = "<group>"; };
+		AF9140D7269EC596005ECF8D /* nativetypescript.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = nativetypescript.entitlements; path = nativetypescript/nativetypescript.entitlements; sourceTree = "<group>"; };
 		E882D6E5FF208B8DB8564BC9 /* libPods-nativetypescript.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-nativetypescript.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F5233111A4A2DA1823396E84 /* Pods-nativetypescript-nativetypescriptTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nativetypescript-nativetypescriptTests.debug.xcconfig"; path = "Target Support Files/Pods-nativetypescript-nativetypescriptTests/Pods-nativetypescript-nativetypescriptTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +70,7 @@
 		13B07FAE1A68108700A75B9A /* nativetypescript */ = {
 			isa = PBXGroup;
 			children = (
+				AF9140D7269EC596005ECF8D /* nativetypescript.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -153,7 +155,6 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				D0617CDD506657069B876120 /* [CP] Embed Pods Frameworks */,
 				69602C943B08133092EA8306 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -264,23 +265,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D0617CDD506657069B876120 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-nativetypescript/Pods-nativetypescript-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-nativetypescript/Pods-nativetypescript-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nativetypescript/Pods-nativetypescript-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = nativetypescript/nativetypescript.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72R228ZCRU;
 				ENABLE_BITCODE = NO;
@@ -336,8 +321,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = nativetypescript;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -348,6 +335,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = nativetypescript/nativetypescript.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72R228ZCRU;
 				INFOPLIST_FILE = nativetypescript/Info.plist;
@@ -362,7 +350,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = nativetypescript;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

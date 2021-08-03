@@ -13,7 +13,7 @@ export default class MySettingScreen extends React.Component<any,any> {
     constructor(props) {
         super(props);
         this.state = {
-            phone:null,
+
         };
     }
 
@@ -23,10 +23,6 @@ export default class MySettingScreen extends React.Component<any,any> {
             StatusBar.setBarStyle('dark-content');
             StatusBar.setBackgroundColor('#fff')
         });
-        let userInfo = JSON.parse(this.props.userState.getUserInfo);
-        this.setState({
-            phone:userInfo.phone||null,
-        })
     }
     onLoginOut=()=>{
         const BUTTONS = [
