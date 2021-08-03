@@ -69,7 +69,7 @@ function homeTab() {
                 style:{backgroundColor:'#000000',position:'absolute',borderTopColor:'#000000'},
             }}
         >
-            <Tab.Screen name="首页" component={HomeScreen}/>
+            <Tab.Screen name="首页" component={HomeScreen} options={{tabBarBadge:12,tabBarBadgeStyle:{color:'#fff'}}}/>
             <Tab.Screen name="短视频" component={MerchantScreen}/>
             <Tab.Screen name="我的" component={MeScreen} />
         </Tab.Navigator>
